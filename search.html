@@ -1,0 +1,92 @@
+<html>
+<head>
+  <title>James Yuan Final Project</title>
+</head>
+<body>
+<link rel="stylesheet" type="text/css" href="css/search_style.css" />	
+<link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="/resources/demos/style.css">
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+<script type="text/javascript" src="js/autocomplete.js"></script>
+<form name="search_term" method="post" action="./search_variants.cgi">
+
+<h1>CFTR Variants Search</h1>
+<h2>Note: Please only use one search option at a time. Leave other search options blank and search option 5 untouched.</h2>
+<p name = "p1">
+<div class="outset">
+<legend class="c1"><b><u> Search Option 1: </legend>
+<label >Enter Variant cDNA Name: </label>
+  <input name="search_cdna" id="cdna" type="text" placeholder="Example: c.137C>A">
+</div>
+
+<div class="outset">
+  <legend class="c1"><b><u> Search Option 2: </legend>
+  <label >Enter Variant Protein Name: </label>
+    <input name="search_prot" id="prot" type="text" placeholder="Example: p.Cys1400X">
+</div>
+
+<div class="outset">
+  <legend class="c1"><b><u> Search Option 3: </legend>
+  <label >Enter Variant Legacy Name: </label>
+    <input name="search_lega" id="lega" type="text" placeholder="Example: 124del23bp">
+</div>
+
+<div class="outset">
+  <legend class="c1"><b><u> Search Option 4: </legend>
+  <label >Enter rsID: </label>
+    <input name="search_rs" id="rs" type="text" placeholder="Example: rs397508244">
+</div>
+</p>
+<fieldset class="f1">
+    <legend class="c1"><b><u> Search Option 5: </legend>
+    <label>Select Clinical Significance: </label>
+    <div>
+      <input type="radio" id="cf" name="significance" value="cf"
+             checked>
+      <label for="one">CF-causing</label>
+    </div>
+
+    <div>
+      <input type="radio" id="non_cf" name="significance" value="non_cf">
+      <label for="two">Non CF-causing</label>
+    </div>
+
+    <div>
+      <input type="radio" id="varying" name="significance" value="varying">
+      <label for="three">Varying clinical consequence</label>
+    </div>
+
+    <div>
+        <input type="radio" id="unknown" name="significance" value="unknown">
+        <label for="four">Unknown significance</label>
+    </div>
+
+    <div>
+      <input type="radio" id="any" name="significance" value="any">
+      <label for="five">Any</label>
+  </div>
+</fieldset>
+
+<fieldset class="f2">
+  <label>Select Display Mode: </label>
+    <div>
+      <input type="radio" id="ten" name="display" value="ten"
+             checked>
+      <label for="huey"> Top 10 results </label>
+    </div>
+
+    <div>
+      <input type="radio" id="all" name="display" value="all">
+      <label for="dewey"> All Results </label>
+    </div>
+</fieldset>
+
+
+<button type="submit" class="but">
+  Search </button>
+</form>  
+	
+</body>
+
+</html>
