@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>James Yuan Final Project</title>
+        <link rel="stylesheet" type="text/css" href="css/template_style.css" />
+        <h1>CFTR Variants Search Results</h1>
+    </head>
+    <body>
+        <p>
+            {{ count }} matches found.<br>
+            
+        </p>
+        <table>
+            <tr>
+                <th>Entries #</th>
+                <th>Variant cDNA Name</th>
+                <th>Variant Protein Name</th>
+                <th>Variant Legacy Name</th>
+                <th>rsID</th>
+                <th>Alleles in CFTR2</th>
+                <th>Allele Frequency in CFTR2</th>
+                <th>% Pancreatic Insufficient</th>
+                <th>Variant Clinical Consequence</th>
+            </tr>
+                {% for r in res_list %}
+            <tr>
+                <td class="c1">{{r[0]}}</td>
+                <td class="c2">{{r[1]}}</td>
+                <td class="c3">{{r[2]}}</td>
+                <td class="c4">{{r[3]}}</td>
+                <td class="c5">{{r[4]}}</td>
+                <td class="c6">{{r[5]}}</td>
+                <td class="c7">{{r[6]}}</td>
+                <td class="c8">{{r[7]}}</td>
+                <td class="c9">{{r[8]}}</td>
+            </tr>
+            {% endfor %}
+            </table>
+    </body>
+</html>
